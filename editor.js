@@ -115,12 +115,6 @@ Process(a) {
   log([message])
   --action end
 }
-
-><
-This is a multi-line comment!
-It will be highlighted correctly :)
-><
-
 r = Runner(Grouplet)
 Process(r) {
   ++run start
