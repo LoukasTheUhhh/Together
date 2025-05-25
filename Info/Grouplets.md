@@ -1,5 +1,5 @@
 # Grouplets
-**Grouplets** are the beating heart of Together. They are special code snippets of different types that eother define code,run code,store stuff or more.
+**Grouplets** are the beating heart of Together. They are special code snippets of different types that either define code,run code,store variables/lists and more.
 ******
 ## Types
 <ins>Grouplets</ins> have the following types:
@@ -8,10 +8,10 @@
 * Storages(They store global variables,lists and more)
 ## Categories
 There are also **two _main_ stages**:
-* Proccesses(The defining of the code)
+* Processes(The defining of the code)
 * Connecting(The running of the code)
 ******
-## How They Work(Proccesses)
+## How They Work(Processes)
 
 ### Action Grouplets
 Action Grouplets are the blood of the Grouplets,inside them are all normal code you want to run,want to test.
@@ -30,7 +30,7 @@ Process(Dave) {
 ```
 ******
 ### Runner Grouplets
-Runner Grouplets are grouplets that run Action and Storage grouplets when connected with them.
+Runner Grouplets are the heart of the Grouplets,they run Action grouplets and Storage grouplets when connected with them.
 Here is how to make one:
 ```
 
@@ -45,7 +45,7 @@ Process(Davis) {
 ```
 ******
 ### Storage Grouplets
-Storage Grouplets are grouplets that store global variables,lists and more.The variables will not be global until it is connected with a runner.
+Storage Grouplets are the brain of the Grouplets,they store global variables,lists and more.The variables will not be global until it is connected with a runner.
 Here is how to make one:
 ```
 
