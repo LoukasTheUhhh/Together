@@ -3,7 +3,7 @@
 They are like the Coca Cola drink on the side at your Mcdonalds order.
 ******
 ## How to implement them
-To import them,you must run the following line of code at the top:
+To implement them,you must run the following line of code at the top:
 ```
 !implement condition (type)
 $$replace "(type)" with either "normal" or "looping"
@@ -73,7 +73,7 @@ Process(ex) {
   }
 }
 ```
-This here is an **infinite loop**.Ot runs for infinity time,because nothing is making the condition stop.Here, It will keep logging ``Yay!`` over and over again,like this:
+This here is an **infinite loop**.It runs for infinity time,because nothing is making the condition stop.Here, It will keep logging ``Yay!`` over and over again,like this:
 ```tgt
 Yay!
 Yay!
