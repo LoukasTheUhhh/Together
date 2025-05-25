@@ -18,7 +18,7 @@ Process(Grouplet: r) {
 }
 Connect(Grouplet1: a, Grouplet2: r) {
   **connect start
-  connect_as = C 
+  connect_as = [C]
   ::connect end
 }
 end
