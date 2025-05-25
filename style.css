@@ -47,7 +47,7 @@ button:hover {
   color: #fff;
   border: 1px solid #444;
   font-family: monospace;
-  font-size: 0.92rem;   /* Smaller text */
+  font-size: 0.82rem !important;   /* Smaller text */
   padding: 0.5rem;
   margin-bottom: 1rem;
   resize: vertical;
@@ -61,7 +61,7 @@ button:hover {
 
 @media (max-width: 600px) {
   #editor {
-    font-size: 0.85rem;      /* Even smaller on mobile */
+    font-size: 0.75rem;      /* Even smaller on mobile */
     height: 180px;           /* Less tall by default on small screens */
     padding: 0.4rem;
   }
