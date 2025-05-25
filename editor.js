@@ -106,26 +106,3 @@ window.runTogether = function() {
   }
 };
 
-// (Optional) Put some starter code in the editor
-window.onload = function() {
-  var editor = document.getElementById("editor");
-  editor.value = `a = Action(Grouplet) $$ Action grouplet
-Process(a) {
-  ++action start
-  [message] = "Hello, World!"
-  log([message])
-  --action end
-}
-r = Runner(Grouplet)
-Process(r) {
-  ++run start
-  /run/ = <a>
-  run(/run/)
-  --run end
-}
-Connect(a, r)
-`;
-  // Force font-size and font-family to match your CSS
-  editor.style.fontSize = "0.92rem";
-  editor.style.fontFamily = "monospace";
-};
