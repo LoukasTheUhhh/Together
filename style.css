@@ -80,3 +80,22 @@ button:hover {
     font-size: 0.92rem;
   }
 }
+/* Together Syntax Highlighting */
+.tgt-comment         { color: #555; font-style: italic; }      /* dark gray */
+.tgt-implement       { color: #bbb; }                         /* light gray */
+.tgt-condition       { color: #e53935; font-weight: bold; }   /* red */
+.tgt-actionstart     { color: #ff9800; font-weight: bold; }   /* orange */
+.tgt-actionend       { color: #ff9800; font-weight: bold; }   /* orange */
+.tgt-keyword         { color: #1565c0; font-weight: bold; }   /* blue */
+.tgt-variable        { color: #388e3c; }                     /* green */
+.tgt-string          { color: #8e24aa; }                     /* purple */
+.tgt-number          { color: #1565c0; }                     /* blue */
+.tgt-default         { color: #222; }                        /* default text */
+pre#highlighted {
+  background: #f5f5f5;
+  padding: 1em;
+  font-size: 1em;
+  font-family: monospace;
+  border-radius: 0.4em;
+  overflow-x: auto;
+}
