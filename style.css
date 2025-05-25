@@ -1,0 +1,17 @@
+.cm-editor {
+  height: 300px;
+  border: 1px solid #888;
+  background: #111;
+  color: #fff;
+}
+#output {
+  margin-top: 10px;
+  background: #111;
+  color: #0f0;
+  padding: 6px;
+  min-height: 32px;
+  font-family: monospace;
+}
+.error {
+  color: #ff4d4d;
+}
