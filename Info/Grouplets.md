@@ -82,8 +82,8 @@ Connect(David, Davis) { $$connect between David and Davis
 
 ><
 Output:
-$$Created Variable [teddyBear]
-$$Created List /toys/
+>>>Created Variable [teddyBear]
+>>>Created List /toys/
 ><
 
 ```
