@@ -44,5 +44,4 @@ Now,you made your first global variable in **Together**!Congrats!
 ## Important Notes:
 * Variable names are always between [ ].
 * Variables are declared with "Let".
-* Placeholder
   
