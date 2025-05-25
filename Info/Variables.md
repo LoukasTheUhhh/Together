@@ -23,7 +23,7 @@ Here is how to make one:
 sFV = Storage(Grouplet)
 Process(sFV) {
   ++start storage
-  [globalVariable] = *2*
+  Let [globalVariable] = *2*
   ++end storage
 }
 rFV = Runner(Grouplet)
@@ -43,6 +43,6 @@ Now,you made your first global variable in **Together**!Congrats!
 ******
 ## Important Notes:
 * Variable names are always between [ ].
-* Placeholder
+* Variables are declared with "Let".
 * Placeholder
   
