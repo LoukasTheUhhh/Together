@@ -23,4 +23,8 @@ Connect(Grouplet1: a, Grouplet2: r) {
 }
 end
 ```
-# CURRENTLY LOOKING FOR DEVS!MESSAGE ME,u/CLIMDJ,ON REDDIT IF YOU WANT TO OFFER TO HELP!
+result:
+```
+Hello World!
+```
+Syntax and grammar can be found in the ``info`` folder.
