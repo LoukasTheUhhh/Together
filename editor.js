@@ -108,7 +108,8 @@ window.runTogether = function() {
 
 // (Optional) Put some starter code in the editor
 window.onload = function() {
-  document.getElementById("editor").value = `a = Action(Grouplet) $$ Action grouplet
+  var editor = document.getElementById("editor");
+  editor.value = `a = Action(Grouplet) $$ Action grouplet
 Process(a) {
   ++action start
   [message] = "Hello, World!"
@@ -124,4 +125,7 @@ Process(r) {
 }
 Connect(a, r)
 `;
+  // Force font-size and font-family to match your CSS
+  editor.style.fontSize = "0.92rem";
+  editor.style.fontFamily = "monospace";
 };
