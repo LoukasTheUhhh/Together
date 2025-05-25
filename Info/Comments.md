@@ -12,8 +12,10 @@ a = Action(Grouplet) $$This is a Single-Line Comment,and a is an Action Grouplet
 In Together,__Multi-Line Comments__ are written with >< at the start and end of them. They are suppose to resemble a handshake.
 ```
 r = Action(Grouplet)
-><Mommy,mommy look!
-I am a Multi-Line Comment!><
+><
+Mommy,mommy look!
+I am a Multi-Line Comment!
+><
 ...
 ```
 ******
