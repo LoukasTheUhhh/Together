@@ -25,6 +25,8 @@
   They are the only way to make runner grouplets,well,run.
   To make one,open your script,and in the runner,put:
   ```together
-  /run/ = @grouplets = Action, Storage, functions = log( ), ask( )@
+  /run/ = @grouplets = Action, Storage;functions = log(), ask() $$etc.@
   run(/run/)
   ```
+  They support ONLY grouplets and functions,and to use them,just add to the ``grouplets`` value all the types of grouplets you want to use,then a semicolon,then for functions,add to the ``functions`` keyword all the functions you want with their ( ) too.
+  ******
