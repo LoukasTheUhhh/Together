@@ -57,8 +57,6 @@ button:hover {
   min-width: 0;
   min-height: 120px;
   max-width: 100%;
-  white-space: nowrap;
-  overflow-x: auto;
 }
 
 @media (max-width: 1080px) {
