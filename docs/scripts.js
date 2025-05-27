@@ -1,3 +1,45 @@
+/*
+JAVASCRIPT
+*/
+function runCode() {
+  const language = document.getElementById("language").value;
+  const code = document.getElementById("editor").value;
+  const output = document.getElementById("output");
+
+  output.textContent = ""; // Clear previous output
+
+  if (language === "javascript") {
+    try {
+      // Capture console.log output
+      let logBuffer = "";
+      const originalLog = console.log;
+      console.log = function(...args) {
+        logBuffer += args.join(" ") + "\n";
+        originalLog.apply(console, args);
+      };
+      eval(code);
+      console.log = originalLog;
+      output.textContent = logBuffer || "[No output]";
+    } catch (e) {
+      output.innerHTML = `<span class="error">Error: ${e.message}</span>`;
+    }
+  } else {
+    output.textContent = "Language not supported yet.";
+  }
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+  document.getElementById("language").addEventListener("change", function() {
+    const lang = this.value;
+    const editor = document.getElementById("editor");
+    if (lang === "javascript") {
+      editor.value = 'console.log("Hello from JavaScript!");';
+    }
+  });
+});
+/*
+TOGETHER
+*/
 // --- Feature Flags ---
 let enabledConditions = {
   normal: false,
