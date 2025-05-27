@@ -51,7 +51,7 @@ button:hover {
   color: #fff;
   border: 1px solid #444;
   font-family: monospace;
-  font-size: 5px !important;   /* Smaller text */
+  font-size: 1rem !important;   /* Fixed: larger, readable text */
   padding: 0.5rem;
   margin-bottom: 1rem;
   resize: vertical;
@@ -62,11 +62,33 @@ button:hover {
   min-height: 120px;
   max-width: 100%;
 }
+/* The language dropdown menu */
+#language {
+  background: #33373b;
+  color: #fff;
+  border: 1px solid #3a3f47;
+  padding: 0.6em 1.2em;
+  font-size: 1rem;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+  margin-left: 0.5em;
+  appearance: none;
+  outline: none;
+  transition: background 0.2s;
+}
+#language:focus {
+  background: #474c55;
+  border-color: #4e535c;
+}
+label[for="language"] {
+  color: #fff;
+  margin-right: 0.5em;
+}
 /*make the screen fit mobile phones*/
 @media (max-width: 1080px) {
   #editor {
-    font-size: 5px;      
-    height: 300px;          
+    font-size: 0.92rem !important;
+    height: 300px;
     padding: 0.5rem;
   }
   body {
