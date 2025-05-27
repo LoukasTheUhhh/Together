@@ -15,3 +15,14 @@ log("Hello World!")
 ```
 It makes it just like Javascript or Python.
 ******
+## Why Use It
+Some,may find it annoying for scripts for simple stuff like "Hello World!" to be 20 lines of code,so instead,they are now only 2 lines of code.\
+This feature is made for quick testing and for beginners.
+******
+## Global Storing
+Because storing units are now no longer in storage grouplets,they have a different way of making themselves global.\
+To make a global store unit,use the following line of code:
+```together
+glb {keyword} {name} = {value} $$the thinks in {} aren't supposed to be copied,just replaced with the things for that storing unit
+```
+******
