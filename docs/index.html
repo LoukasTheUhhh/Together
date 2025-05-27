@@ -1,35 +1,39 @@
 <!DOCTYPE html>
-<!--Start the document,in english-->
 <html lang="en">
-<head>
-  <!--Keywords,character set,responsive viewport and author-->
-  <meta charset="UTF-8">
-  <meta name="keywords" content="Together, Programming Language, Code Editor">
-  <meta name="author" content="LoukasTheUhhh">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!--Tab title-->
-  <title>
-    Together Online Editor
-  </title>
-  <!--External files-->
-  <link rel="stylesheet" href="./styles.css">
-  <script src="./scripts.js">
-  </script>
-</head>
-<body>
-  <!--Main Title-->
-  <h2>
-    Together Language Editor
-  </h2>
-  <!--Editing area-->
-  <textarea id="editor" placeholder="Type your code here..." style="width:100%;height:300px; wrap="off"">    
-  </textarea>
-  <!--Button for running-->
-  <button onclick="runTogether()">
-    Run Together Code
-  </button>
-  <!--Output area-->
-  <div id="output">
-  </div>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <title>
+			Together Multi-Language Code Editor
+		</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <h2>
+			Together Multi-Language Code Editor
+		</h2>
+        <div style="margin-bottom: 0.5rem;">
+            <label for="language">
+				Language:
+			</label>
+            <select id="language">
+                <option value="together">
+					Together
+				</option>
+                <option value="javascript">
+					JavaScript
+				</option>
+            </select>
+        </div>
+        <textarea id="editor">
+			// Write your code here
+		</textarea>
+        <br>
+        <button onclick="runCode()">
+			Run
+		</button>
+        <pre id="output">
+		</pre>
+        <script src="scripts.js">
+		</script>
+    </body>
 </html>
