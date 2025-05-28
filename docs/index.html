@@ -1,39 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>
-	    Together Multi-Language Code Editor
-	</title>
-        <link rel="stylesheet" href="styles.css">
-    </head>
-    <body>
-        <h2>
-	    Together Multi-Language Code Editor
-	</h2>
-        <div style="margin-bottom: 0.5rem;">
-            <label for="language">
-		Language:
-	    </label>
-            <select id="language">
-                <option value="together">
-		    Together
-		</option>
-                <option value="javascript">
-		    JavaScript
-		</option>
-            </select>
-        </div>
-        <textarea id="editor">
-	    // Write your code here
-	</textarea>
-        <br>
-        <button onclick="runCode()">
-	    Run
-	</button>
-        <pre id="output">
-	</pre>
-        <script src="scripts.js">
-	</script>
-    </body>
+<head>
+  <meta charset="UTF-8">
+  <title>Together Code Runner</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="scripts.js">
+</head>
+<body>
+  <h2>Together Code Runner</h2>
+  <div style="margin-bottom: 1rem;">
+    <label for="fileInput"><b>Upload <code>.together</code> file:</b></label>
+    <input type="file" id="fileInput" accept=".together">
+  </div>
+  <textarea id="editor" placeholder="Type or paste your Together code here..."></textarea>
+  <br>
+  <button onclick="runTogether()">Run</button>
+  <pre id="output"></pre>
+  <script>
+    // Load .together file content into textarea
+    document.getElementById('fileInput').addEventListener('change', function(e) {
+      const file = e.target.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = function(ev) {
+        document.getElementById('editor').value = ev.target.result;
+      };
+      reader.readAsText(file);
+    });
+
+    // Send code to backend and display response
+    async function runTogether() {
+      const code = document.getElementById('editor').value.trim();
+      const output = document.getElementById('output');
+      output.classList.remove('error');
+      if (!code) {
+        output.textContent = "Please enter Together code or upload a file.";
+        output.classList.add('error');
+        return;
+      }
+      output.textContent = "Running...";
+      try {
+        const res = await fetch('/run', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ code })
+        });
+        const data = await res.json();
+        if (data.error) {
+          output.textContent = data.error;
+          output.classList.add('error');
+        } else {
+          output.textContent = data.output || "No output.";
+        }
+      } catch (err) {
+        output.textContent = "Error: " + err.message;
+        output.classList.add('error');
+      }
+    }
+  </script>
+</body>
 </html>
