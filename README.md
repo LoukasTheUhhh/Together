@@ -11,7 +11,7 @@ Process(Grouplet: a) {
 }
 Process(Grouplet: r) {
   ++start
-  /run/ = @grouplets = a, r;functions = log(), Process(), Connect()@
+  /run/ = @grouplets = action, storage;functions = log(), Process(), Connect()@
   run(/run/)
   --end
 }
