@@ -37,7 +37,7 @@ Here is how to make one:
 Davis = Runner(Grouplet)
 Process(Davis) {
   ++run start $$Start the running
-  /run/ = <proccesors, functions> $$Define the ran parts,proccesors being the connections and the procceses,plus the ++example start and -- example end
+  /run/ = @grouplets = action;functions = Process(), Connect(), log()@ $$needed for proper runnin
   run(/run/) $$Run the parts from the running list
   --run end $$Stop the running
 }
@@ -53,7 +53,7 @@ David = Storage(Grouplet)
 Process(David) {
   ++storage start $$start the storage
   [teddyBear] = *2* $$Variables are always surrounded by [],and integers + floats by * *.
-  /toys/ = ["Train", _true_, *7.1*] $$Lists are always surrounded by / /,and booleans by _ _.
+  /toys/ = #"Train", _true_, *7.1*# $$Lists are always surrounded by / /,and booleans by _ _.
   --storage end $$end the storage
 }
 
@@ -74,11 +74,7 @@ Connect(Dave, Davis) { $$connect between Dave and Davis
 Output:
 Hello World!
 ><
-Connect(David, Davis) { $$connect between David and Davis
-  **connect start
-  connect_as = [Jessica]
-  ::connect end
-}
+Connect(David, Davis) $$connect between David and Davis
 
 ><
 Output:
