@@ -13,7 +13,7 @@
   all values can consist of these types:
   - "strings"/'strings'
   - \*integers\*
-  - \^floats\^
+  - |floats|
   - \_booleans\_
   - [variables]
     
