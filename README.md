@@ -5,15 +5,15 @@ Example Hello World Program:
 a = action(Grouplet)
 r = runner(Grouplet)
 Process(Grouplet: a) {
-  ++action start
+  ++start
   log("Hello World!")
-  --action end
+  --end
 }
 Process(Grouplet: r) {
-  ++run start
-  /run/ = <grouplets = a, r;functions = log()>
+  ++start
+  /run/ = @grouplets = a, r;functions = log(), Process(), Connect()@
   run(/run/)
-  --run end
+  --end
 }
 Connect(Grouplet1: a, Grouplet2: r)
 ```
