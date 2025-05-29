@@ -4,7 +4,7 @@ Shapes are the most complex storing units there ever is and will be. They have v
 ## How to Make One
 Here is a example format for shapes:
 ```together
---Dave-- = {
+shape --Dave-- = {
   "General_Stuff" {
     vrb [Age] = 13
     vrb [Height] = 5.1
@@ -55,4 +55,27 @@ shape --database-- {
   }
 }
 ```
+***
+## How to Index
+Indexing in Together is pretty simple,if it's a variable or list,you can just use it,but if you want to use a string or an integer,index using this:
+```tgt
+--shape--{2, 1}
+```
+Now,lemme explain this:
+- shape is the name
+- the -- always surround shape names
+- the {} means we are indexing
+- the first number is the number of the value,the order he is in with the other parts of the same type(this case he is the
+third)
+- the second number is the type,where the type at default is 0,meaning this is part of a 0 type value
+***
+## Notes
+> [!NOTE]
+> New shapes are declared with ``shape``.
+
+> [!NOTE]
+> The nesting limit of a shape is 5.
+
+> [!NOTE]
+> The first indexing number is 0.
 ***
