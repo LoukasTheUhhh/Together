@@ -36,6 +36,13 @@
   top: 0;
   left: -20px;
 }
+h1 {
+  color: white;
+  font-family: monospace;
+}
+p {
+  color: white;
+  font-family: monospace;
 
 
 
