@@ -1,14 +1,14 @@
 function tokenize(input) {
   const tokenSpecs = [
-    ['CONDITION',   /*this doesn't work since i do not know regex*/],
-    ['NUMBER', /*this doesn't work since i do not know regex*/],
-    ['IDENTIFIER', /*this doesn't work since i do not know regex*/],
-    ['OPERATOR',  /*this doesn't work since i do not know regex*/],
-    ['PUNCTUATION', /*this doesn't work since i do not know regex*/],
-    ['WHITESPACE', /*this doesn't work since i do not know regex*/],
-    ['STRING', /*this doesn't work since i do not know regex*/],
-    ['IMPLEMENT', /*this doesn't work since i do not know regex*/],
-    ['BOOLEAN', /*this doesn't work since i do not know regex*/]
+    ['CONDITION', /\b(?:If|Else|Else If|During|For)\b/],
+    ['NUMBER', /-?\d+(\.\d+)?/],
+    ['IDENTIFIER', /[a-zA-Z_]+/],
+    ['OPERATOR', /[<>]=?|==?\?{1,2}|[+\-*/%=]|(?:\+-\+|-\+-|\+\+|<\-\->|\\\\|==|\*=|\+=|-=|%=|/=)/],
+    ['PUNCTUATION', /[:,;{}()]/],
+    ['WHITESPACE', /\s+/],
+    ['STRING', /(["'])(.*?)\1/g],
+    ['IMPLEMENT', /\b(?:return|shape|vrb|list|str|int|float|bool|Action|Runner|Storage|Grouplet|declare|\!implement)\b/],
+    ['BOOLEAN', /\b(?:true|false|maybe)\b/]
   ];
 
   const tokens = [];
@@ -37,6 +37,6 @@ function tokenize(input) {
   return tokens;
 }
 
-const code = /*Uhhh..i dont know how to make this from .tgt files*/;
+const code = input();
 const tokens = tokenize(code);
 console.log(tokens);
