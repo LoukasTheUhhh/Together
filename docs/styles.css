@@ -1,0 +1,31 @@
+#screen {
+  background-color: black;
+}
+#editor {
+  width: 100%;
+  height: 300px;
+  color: white;
+  font-family: monospace;
+  font-size: 7px;
+  background-color: #212121;
+  overflow-y: auto;
+  overflow-x: scroll;
+}
+#output {
+  width: 100px;
+  height: 150px;
+  color: white;
+  font-size: 7px;
+  background-color: #333333;
+  font-family: monospace;
+  overflow-y: auto;
+  overflow-x: scroll;
+}
+#run {
+  background-color: #6a9965;
+  border: 2px #212121;
+  color: white;
+  font-family: monospace;
+  font-size: 7px;
+}
+  
