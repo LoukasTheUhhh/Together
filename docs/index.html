@@ -9,9 +9,15 @@
 		<meta name="viewport" content="width=device-width;initital-scale=1.0">
 		<meta name="keywords" content="Code Editor, Together, Programming Language, Programming">
 		<meta name="description" content="Code Editor for Together">
+                <link rel="stylesheet" type="text/css" href="./styles.css">
+		<script src="./lexer.js"></script>
+		<script src="./parser.js"></script>
+		<script src="./actiontree.js"></script>
+		<script src="./interpreter.js"></script>
+		<script src="./evaluator.js"></script>
 	</head>
-	<body class="screen">
-		<div class="top">
+	<body id="screen">
+		<div id="top">
 			<h1 class="title">
 				Together Code Editor(Demo)
 			</h1>
@@ -28,7 +34,9 @@
 			<textarea id="editor" placeholder="Enter your code here...">
 			</textarea>
 		</div>
-		<div id="output">
+		<div>
+			<p id="output">	
+			</p>
 		</div>
 	</body>
 </html>
