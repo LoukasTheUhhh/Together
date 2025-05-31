@@ -20,6 +20,9 @@
   But can NOT consist of these types:
   - Grouplets
   - Functions
+### Indexing
+To index variables,you must use the formula `/name/#int#`.
+For this example,to index value 1,we would use `/list/#0#`.
 ## Run Lists
   Run Lists are other,special versions of lists that are used STRICTLY for runners.
   They are the only way to make runner grouplets,well,run.
