@@ -37,6 +37,6 @@ function tokenize(input) {
   return tokens;
 }
 
-const code = input();
+let code = document.getElementById("editor");
 const tokens = tokenize(code);
 console.log(tokens);
