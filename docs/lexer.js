@@ -7,7 +7,7 @@ function tokenize(input) {
     ['PUNCTUATION', /[:,;{}()]/],
     ['WHITESPACE', /\s+/],
     ['STRING', /(["'])(.*?)\1/g],
-    ['IMPLEMENT', /\b(?:return|shape|vrb|list|str|int|float|bool|Action|Runner|Storage|Grouplet|declare|\!implement)\b/],
+    ['KEYWORD', /\b(?:return|shape|vrb|list|str|int|float|bool|Action|Runner|Storage|Grouplet|declare|\!implement)\b/],
     ['BOOLEAN', /\b(?:true|false|maybe)\b/]
   ];
 
