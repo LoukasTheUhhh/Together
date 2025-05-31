@@ -37,6 +37,6 @@ function tokenize(input) {
   return tokens;
 }
 
-const code = "if (x == 10) { return x + 1; }";
+const code = /*Uhhh..i dont know how to make this from .tgt files*/;
 const tokens = tokenize(code);
 console.log(tokens);
