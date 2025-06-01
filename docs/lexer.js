@@ -1,7 +1,7 @@
 //tokenize
-function tokenize(input) {
+export function tokenize(input) {
   //token types and regexes
-  const tokenSpecs = [
+  export const tokenSpecs = [
     ['CONDITION', /^\b(?:If|Else If|Else|During|For)\b/],
     ['KEYWORD', /^\b(?:return|shape|vrb|list|str|int|float|bool|Action|Runner|Storage|Grouplet|declare|!implement)\b/],
     ['BOOLEAN', /^\b(?:true|false|maybe)\b/],
@@ -13,14 +13,14 @@ function tokenize(input) {
     ['WHITESPACE', /^\s+/]
   ];
 
-  const tokens = [];
-  let str = input;
+  export const tokens = [];
+  export let str = input;
 //flag matched false when the input has something in it
   while (str.length > 0) {
-    let matched = false;
+    export let matched = false;
 //class the tokens
     for (const [type, regex] of tokenSpecs) {
-      const match = str.match(regex);
+      export const match = str.match(regex);
       if (match) {
         matched = true;
         //check if the space contains whitespace only or characters too
@@ -40,7 +40,9 @@ function tokenize(input) {
   return tokens;
 }
 //define the tokenized part
-let code = document.getElementById("editor");
-const tokens = tokenize(code);
+export let code = document.getElementById("editor");
+export const tokens = tokenize(code);
 //finally tokenize the code
-console.log(tokens);
+export function getTokens() {
+  console.log(tokens);
+}
