@@ -27,6 +27,8 @@
   color: white;
   font-family: monospace;
   font-size: 7px;
+  width: 75px;
+  height: 50px;
   
 }
 #top {
@@ -43,6 +45,7 @@ h1 {
 p {
   color: white;
   font-family: monospace;
+}
 
 
 
