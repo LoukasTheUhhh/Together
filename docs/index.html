@@ -9,12 +9,19 @@
 		<meta name="viewport" content="width=device-width;initital-scale=1.0">
 		<meta name="keywords" content="Code Editor, Together, Programming Language, Programming">
 		<meta name="description" content="Code Editor for Together">
-                <link rel="stylesheet" type="text/css" href="./styles.css">
+        <link rel="stylesheet" type="text/css" href="./styles.css">
 		<script src="./lexer.js"></script>
 		<script src="./parser.js"></script>
 		<script src="./actiontree.js"></script>
 		<script src="./interpreter.js"></script>
 		<script src="./evaluator.js"></script>
+        <script>
+            //import from lexer
+            import {getTokens, code, tokens} from ./lexer.js
+            function outputLexing() {
+                document.getElementById("output").innerHTML = getTokens()
+            }
+        </script>
 	</head>
 	<body id="screen">
 		<div id="top">
@@ -26,7 +33,7 @@
 			</p>
 		</div>
 		<div>
-			<button id="run">
+			<button id="run" onclick="outputLexing()">
 				Run
 			</button>
 		</div>
