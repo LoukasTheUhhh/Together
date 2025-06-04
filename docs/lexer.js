@@ -41,8 +41,7 @@ export function tokenize(input) {
 }
 //define the tokenized part
 export let code = document.getElementById("editor");
-export const tokens = tokenize(code);
 //finally tokenize the code
 export function getTokens() {
-  console.log(tokens);
+  console.log(tokenize(code));
 }
