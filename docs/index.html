@@ -20,7 +20,7 @@
 		<script src="./interpreter.js"></script>
 		<script src="./evaluator.js"></script>
 	<script type="module">
-   import { getTokens } from "./lexer.js";
+   import { tokenize, getTokens } from "./lexer.js";
    window.outputLexing = function() {
    try {
       const tokens = getTokens();
