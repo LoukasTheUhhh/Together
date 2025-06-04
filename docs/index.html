@@ -19,13 +19,17 @@
 		<script src="./actiontree.js"></script>
 		<script src="./interpreter.js"></script>
 		<script src="./evaluator.js"></script>
-        <script type="module">
-            //import from lexer
-            import {getTokens, code, tokenize} from "./lexer.js"
-            function outputLexing() {
-                document.getElementById("output").innerHTML = str(getTokens())
-            }
-        </script>
+	<script type="module">
+   import { getTokens } from "./lexer.js";
+   window.outputLexing = function() {
+   try {
+      const tokens = getTokens();
+      document.getElementById("output").textContent = JSON.stringify(tokens, null, 2);
+    } catch (err) {
+      document.getElementById("output").textContent = "Error: " + err.message;
+    }
+}
+	</script>
     </head>
     <!--Readable/Interactable Data-->
 	<body id="screen">
