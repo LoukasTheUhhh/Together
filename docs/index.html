@@ -21,9 +21,9 @@
 		<script src="./evaluator.js"></script>
         <script type="module">
             //import from lexer
-            import {getTokens, code, tokens} from "./lexer.js"
+            import {getTokens, code, tokenize} from "./lexer.js"
             function outputLexing() {
-                document.getElementById("output").innerHTML = getTokens()
+                document.getElementById("output").innerHTML = str(getTokens())
             }
         </script>
     </head>
