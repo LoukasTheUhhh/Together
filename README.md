@@ -1,4 +1,7 @@
 # Together
+![Insert Together Logo](Together.png)
+
+
 **Together**is a Programming Language project,where it aims to connect "grouplets",aka,groups of code,that work **together**.
 Example Hello World Program:
 ```
