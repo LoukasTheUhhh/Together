@@ -1,7 +1,7 @@
 export function tokenize(input) {
   const tokenSpecs = [
-    ['CONDITION', /^\b(?:If|Else If|Else|During|For)\b/],
-    ['KEYWORD', /^\b(?:return|shape|vrb|list|str|int|float|bool|Action|Runner|Storage|Grouplet|declare|!implement)\b/],
+    ['CONDITION', /^\b(?:If|Else If|Else|During|For|Until|Run)\b/],
+    ['KEYWORD', /^\b(?:return|shape|vrb|list|str|int|float|bool|declare|!place|!order)\b/],
     ['BOOLEAN', /^\b(?:true|false|maybe)\b/],
     ['NUMBER', /^-?(?:\d*\.\d+|\d+)(?:[eE][+-]?\d+)?/],
     ['STRING', /^"([^"\\]*(\\.[^"\\]*)*)"|^'([^'\\]*(\\.[^"\\]*)*)'/],
@@ -33,7 +33,6 @@ export function tokenize(input) {
   return tokens;
 }
 export function getTokens() {
-  const code = document.getElementById("editor").value;
+  const code = /*uhhhhh....where do i get it from? ._. */;
   return tokenize(code);
-                    }
-
+}
