@@ -1,3 +1,4 @@
+******
 # Together
 ![Insert Together Logo](Together.png)
 
@@ -36,4 +37,18 @@ And there is so many more reasons!\
 You might think,"What's the benefit?" "Why Together?",well,you will have to find out!\
 Remember:
 > Don't judge a book by it's cover.
+
+******
+# PLEASE READ!!!
+Together's Documentation and source code was all reset because of an burnout i had trying to finally make the parser.
+Right now,Together's Source Code will be split into 4 parts:
+  * Together Fast:Similar syntax and behavior to high-level languages like Javascript or Python. Made mainly for learning the hangs of programming programming languages.
+  * Together Branch:Introduces grouplets and more customizabillity,kinda similar to a low-level language. Made mainly for learning how to make its standing-out syntax,and get more complex.
+  * Together Tree:Introduces even more features and extra stuff,including Shapes. Made for actually distributing it and making it get used.
+  * Together Merged:Introduces both Normal mode and Fast mode,having everything from previous versions. This is gonna be the big release.
+
+These will all be made in the order they are listed.\
+People are free to suggest features,help me or just support me.
+******
+
 
