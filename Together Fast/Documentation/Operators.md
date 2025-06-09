@@ -5,7 +5,7 @@ There are 5 main types of operators in Together Fast:
 * Arithmetical Operators(+, -, %, +-+, etc.);
 * Assigment Operators(=, ==, +=, %=, etc.);
 * Conditional Operators(>, <, =?, etc.);
-* Logical Operators(+++, //, !!);
+* Logical Operators(&, <->, @);
 * Type Combining Operators(.., ++, etc.)
 ***
 ## Arithmetical Operators
@@ -29,9 +29,9 @@ Arithmetical Operators are the operators for doing math equations and stuff such
  ### List
  Operator | Meaning
  --- | ---
- `+++` | The Logical AND Operator.
+ `&` | The Logical AND Operator.
  `<->` | The Logical OR Operator.
- `!!` | The Logical NOT operator.
+ `@` | The Logical NOT operator.
  ***
  ## Conditional Operators
  ### Definition
@@ -56,7 +56,11 @@ Arithmetical Operators are the operators for doing math equations and stuff such
  Operator | Use
  --- | ---
  `..` | Combining Two Strings.
- (any arithmetical operator two times) | Used for doing that type of math between an integer and a float.
+ (any arithmetical operator two times) | Doing that type of math between an integer and a float.
+ `-.` | Removing parts of a string.
+ `*.` | Multiplying a string.
+ `/.` | Dividing a string(breaking it into multiple parts,and adding [n] after it,n being the part you want.
+ `^.` | Multiplying a string by its length.
  
  
  
