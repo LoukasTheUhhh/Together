@@ -61,8 +61,4 @@ Arithmetical Operators are the operators for doing math equations and stuff such
  `*.` | Multiplying a string.
  `/.` | Dividing a string(breaking it into multiple parts,and adding [n] after it,n being the part you want.
  `^.` | Multiplying a string by its length.
- 
- 
- 
- 
- 
+ ***
