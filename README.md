@@ -4,40 +4,82 @@
 
 
 **Together**is a Programming Language project,where it aims to connect "grouplets",aka,groups of code,that work **together**.
-Example Hello World Program:
+Example Hello World Program,In Together Fast:
+```tgt
+$$ this is a comment
+!place cs $$ import console
+cs.log("Hello World!") $$ logs "Hello World!"
 ```
-a = action(Grouplet)
-r = runner(Grouplet)
-Process(Grouplet: a) {
-  ++start
-  log("Hello World!")
-  --end
+Example Hello World Program,In Together Branch:
+```tgt
+$$ this is a comment
+gl HelloWorld { $$ Creates an grouplet called HelloWorld,basically like a Java Class
+  !place cs $$ import console
+  sect main { $$ section for any type of code
+    cs.log("Hello World!") $$ logs "Hello World!"
+  }
 }
-Process(Grouplet: r) {
-  ++start
-  /run/ = @grouplets = action, storage;functions = log(), Process(), Connect()@
-  run(/run/)
-  --end
-}
-Connect(Grouplet1: a, Grouplet2: r)
 ```
-result:
+Example Hello World Program,In Together Tree:
+```tgt
+$$ this is a comment
+gl HelloWorld(action) { $$ Creates an Action Grouplet called HelloWorld
+  !place cs $$ import console
+  sect main { $$ section for any type of code
+    cs.log("Hello World!")
+  }
+}
+gl HelloRun(runner) { $$ Creates an Action Grouplet called HelloRun
+  sect main { $$ section for any type of code
+    df.run = instant $$ on RunTogether() inside HTML 
+    df.acceptedr = any $$ make any type of code accepted
+  }
+}
+Connection { $$ Connections make so that the code can actually run
+  cn.gl1 = HelloWorld $$ the first grouplet to connect
+  cn.gl2 = HelloRun $$ the second grouplet to connect
+  cn.result = WorldRun $$ referenced with WorldRun
+}
+```
+Example Hello World Program,In Together Merged:
+```tgt
+!mode merged
+$$ this is a comment
+gl HelloAction { $$ create a grouplet called HelloActoon
+  Info { $$ type and packages
+    info.type = Action $$ the grouplet is an action
+    info.packages = cs $$ Add console functions
+  }
+  Process { $$ the code
+    sect main { $$ section for any type of code
+      cs.log("Hello World!") $$ log "Hello World!"
+    }
+  }
+}
+gl HelloRunner { $$ create a grouplet called HelloRunner
+  Info { $$ type
+    info.type = Runner
+  }
+  Process { $$ the code
+    sect main { $$ section for any type of code
+      df.run = instant $$ on RunTogether() inside HTML
+      df.acceptedr = any $$ any type of code is accepted
+    }
+  }
+}
+
+Connection {
+  cn.gl1 = HelloAction $$ the first grouplet to connect with
+  cn.gl2 = HelloRunner $$ the second grouplet to connect with
+  cn.result = ActionRunner $$ a new grouplet for referencing the result
+}
+$$ also can be done in the other versions by changing the !mode at the top to fast,branch or tree
+```
+result(for all versions):
 ```
 Hello World!
 ```
-Syntax and grammar can be found in the ``info`` folder.
-# Why Together?
-Together has high customizabillity,making conditions optional and both a lengthy mode,and a fast mode.
-Together is inspired by little things from MULTIPLE languages,like shapes being maps from Go lang,implementing being from Python,Fast Mode from Javascript,and many,many more.\
-Ever wanted to make code,but only test pieces of it?With run lists,we got you!\
-Ever wanted to have the option to make variables and lsits local or global,chose by you?we got you!\
-Ever wanted a language that has symbols around all types to be impossible to not distinguish them?We got you!\
-Ever wanted a language that can have some literal single storing unit be a entire database?With shapes,we got you!\
-And there is so many more reasons!\
-You might think,"What's the benefit?" "Why Together?",well,you will have to find out!\
-Remember:
-> Don't judge a book by it's cover.
-
+Syntax and grammar can be found in the ``Documentation_(version)`` folder nested inside every version folder.
 ******
 # PLEASE READ!!!
 Together's Documentation and source code was all reset because of an burnout i had trying to finally make the parser.
