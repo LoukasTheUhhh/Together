@@ -3,7 +3,7 @@
 ![Insert Together Logo](Together.png)
 
 
-**Together**is a Programming Language project,where it aims to connect "grouplets",aka,groups of code,that work **together**.
+**Together**is a Programming Language project,where it aims to connect "grouplets",aka,groups of code,that work **together**.\
 Example Hello World Program,In Together Fast:
 ```tgt
 $$ this is a comment
@@ -20,6 +20,23 @@ gl HelloWorld { $$ Creates an grouplet called HelloWorld,basically like a Java C
   }
 }
 ```
+Example Hello World Program,In Together Fruit:
+```tgt
+gl HelloWorld(action) { $$ creates an action grouplet called HelloWorld
+  !place cs $$ import console
+  sect normal { $$ section for functions and logic
+    cs.log("Hello World!") $$ logs "Hello World!"
+  }
+}
+gl AutoRunner(runner) { $$ creates a runner Grouplet called AutoRunner
+  sect normal { $$ section for functions and logic
+    run.auto = true $$ runs when RunTogetherFruit() is written inside a callback of .js or .html or .php
+  }
+}
+
+HelloWorld <=> AutoRunner $$ connect the two grouplets to make them run together
+```
+
 Example Hello World Program,In Together Tree:
 ```tgt
 $$ this is a comment
@@ -86,6 +103,7 @@ Together's Documentation and source code was all reset because of an burnout i h
 Right now,Together's Source Code will be split into 4 parts:
   * Together Fast:Similar syntax and behavior to high-level languages like Javascript or Python. Made mainly for learning the hangs of programming programming languages.
   * Together Branch:Introduces grouplets and more customizabillity,kinda similar to a more complex language like Cpp or Java. Made mainly for learning how to make its standing-out syntax,and get more complex.
+  * Together Fruit: A sweet middle ground between Branch and Tree,being both for learning,and distributing.
   * Together Tree:Introduces even more features and extra stuff,including Shapes. Made for actually distributing it and making it get used.
   * Together Merged:Introduces both Normal mode and Fast mode,having everything from previous versions. This is gonna be the big release.
 
