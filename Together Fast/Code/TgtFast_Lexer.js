@@ -62,7 +62,7 @@ function tokenize(code) {
     }
 
     if (!matchedToken) {
-      throw new Error(`Unexpected token: '${remainingCode[0]}'`);
+      throw new Error(`Oops!We got an unexpected token,known as '${remainingCode[0]}'!Hope you can fix it! :D`);
     }
   }
 
@@ -74,16 +74,16 @@ function runTogetherFast(sourceOptions = {}) {
   const code = getCode(sourceOptions);
 
   if (!code) {
-    console.warn('No Together code found with the given options:', sourceOptions);
+    console.warn('Wait,', sourceOptions, 'has no Together code!What a tragedy...');
     return [];
   }
 
   try {
     const tokens = tokenize(code);
-    console.log('[Together Fast Tokens]', tokens);
+    console.log('Just so you know,the tokens are:\n', tokens);
     return tokens;
   } catch (error) {
-    console.error('Tokenizing error:', error.message);
+    console.error('Oops,we got a tokenizing error: ', error.message, ' :(');
     return [];
   }
 }
