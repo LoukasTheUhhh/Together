@@ -4,12 +4,6 @@
 
 
 **Together**is a Programming Language project,where it aims to connect "grouplets",aka,groups of code,that work **together**.\
-Example Hello World Program,In Together Fast:
-```tgt
-$$ this is a comment
-!place cs $$ import console
-cs.log("Hello World!") $$ logs "Hello World!"
-```
 Example Hello World Program,In Together Branch:
 ```tgt
 $$ this is a comment
@@ -101,7 +95,7 @@ Syntax and grammar can be found in the ``Documentation_(version)`` folder nested
 # PLEASE READ!!!
 Together's Documentation and source code was all reset because of an burnout i had trying to finally make the parser.
 Right now,Together's Source Code will be split into 4 parts:
-  * Together Fast:Similar syntax and behavior to high-level languages like Javascript or Python. Made mainly for learning the hangs of programming programming languages.
+  * ~~Together Fast:Similar syntax and behavior to high-level languages like Javascript or Python. Made mainly for learning the hangs of programming programming languages.~~ Replaced with V3rsa. check out it's repository instead.
   * Together Branch:Introduces grouplets and more customizabillity,kinda similar to a more complex language like Cpp or Java. Made mainly for learning how to make its standing-out syntax,and get more complex.
   * Together Fruit: A sweet middle ground between Branch and Tree,being both for learning,and distributing.
   * Together Tree:Introduces even more features and extra stuff,including Shapes. Made for actually distributing it and making it get used.
